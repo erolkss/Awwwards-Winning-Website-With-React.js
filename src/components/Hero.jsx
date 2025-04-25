@@ -13,12 +13,18 @@ const Hero = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [loadedVideos, setLoadedVideos] = useState(0);
 
-    const totalVideos = 3;
+    const totalVideos = 4;
     const nextVideoRef = useRef(null);
 
     const handleVideoLoaded = () => {
         setLoadedVideos((prev) => prev + 1);
     }
+
+    useEffect(() => {
+        if (loadedVideos === totalVideos - 1) {
+            setIsLoading(false);
+        }
+    }, [loadedVideos]);
 
     const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
 
@@ -26,12 +32,6 @@ const Hero = () => {
         setHasClicked(true);
         setCurrentIndex(upcomingVideoIndex);
     }
-
-    useEffect(() => {
-        if (loadedVideos === totalVideos) {
-            setIsLoading(false);
-        }
-    }, [loadedVideos]);
 
     useGSAP(() => {
         if (hasClicked) {
