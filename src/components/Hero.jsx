@@ -122,14 +122,14 @@ const Hero = () => {
                         autoPlay
                         loop
                         muted
-                        className="abosolute left-0 top-0 size-full object-cover object-center"
+                        className="absolute left-0 top-0 size-full object-cover object-center"
                         onLoadedData={handleVideoLoaded}
                     />
                 </div>
                 <h1 className="special-font hero-heading absolute bottom-5 righ-5 z-40 text-blue-75">
                     G<b>a</b>ming
                 </h1>
-                <div className="absolute left-0 top-0 z-40 zize-full">
+                <div className="absolute left-0 top-0 z-40 s    ize-full">
                     <div className="mt-24 px-5 sm:px-10">
                         <h1 className="special-font hero-heading text-blue-100">redefi<b>n</b>e</h1>
                         <p className="mb-5 max-w-64 font-robert-regular text-blue-100">Enter the Metagame Layer<br/>Unlaesh
@@ -139,7 +139,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <h1 className="special-font hero-heading absolute bottom-5 righ-5text-black">
+            <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
                 G<b>a</b>ming
             </h1>
         </div>
